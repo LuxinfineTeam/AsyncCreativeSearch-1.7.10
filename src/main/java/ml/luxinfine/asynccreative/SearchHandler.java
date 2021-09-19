@@ -14,9 +14,8 @@ public class SearchHandler {
     private static CompletableFuture<Void> SEARCH_TASK;
 
     public static void search(GuiContainerCreative gui) {
+        stopSearch();
         GuiContainerCreative.ContainerCreative containercreative = (GuiContainerCreative.ContainerCreative)gui.inventorySlots;
-        if (SEARCH_TASK != null)
-            SEARCH_TASK.cancel(true);
         containercreative.itemList.clear();
         SEARCH_TASK = CompletableFuture.runAsync(() -> {
             CreativeTabs tab = CreativeTabs.creativeTabArray[GuiContainerCreative.selectedTabIndex];
@@ -70,6 +69,13 @@ public class SearchHandler {
         }
         gui.currentScroll = 0.0F;
         container.scrollTo(0.0F);
+    }
+
+    public static void stopSearch() {
+        if(SEARCH_TASK != null) {
+            SEARCH_TASK.cancel(true);
+            SEARCH_TASK = null;
+        }
     }
 
 }
