@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven {
+            name = "gt"
+            url = "https://gregtech.overminddl1.com/"
+        }
+        maven {
+            name = "jitpack.io"
+            url = "https://jitpack.io"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'com.github.GTNH2:ForgeGradle:FG_1.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'forge'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+version = "1.0"
+group= "ml.luxinfine"
+archivesBaseName = "LuxinfineAsyncCreative"
+
+minecraft {
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir = "run"
+    replace "#MOD_VERSION#", project.version
+    replace "#MOD_NAME#", project.archivesBaseName
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+}
+
+jar {
+    manifest {
+        attributes 'FMLAT': 'AsyncCreative_at.cfg'
+        attributes 'FMLCorePlugin': 'ml.luxinfine.asynccreative.CorePlugin'
+    }
+}
