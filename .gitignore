@@ -1,30 +1,34 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-#Idea files
-.env
-.classpath
-.project
-.idea/ 
-/.gradle
-/.settings
+ .env
+ .png_compress_cache
+ .gradle
+ /.settings
+ /bin
+ .classpath
+ .project
+ .idea/
+ /asm/
+ /blueprints/
+ /config/
+ /crash-reports/
+ /logs/
+ /resourcepacks/
+ /run/
+ /saves/
+ /screenshots/
+ /scripts/
+ /world/
+ /banned-ips.json
+ /banned-players.json
+ /eula.txt
+ /minetweaker.log
+ /ops.json
+ /options.txt
+ /server.properties
+ /servers.dat
+ /usercache.json
+ /usernamecache.json
+ /whitelist.json
+ /mods/
+ /build/
+ /eclipse/
+ 
