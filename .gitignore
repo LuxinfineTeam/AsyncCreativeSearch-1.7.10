@@ -1,34 +1,11 @@
- .env
- .png_compress_cache
- .gradle
- /.settings
- /bin
- .classpath
- .project
- .idea/
- /asm/
- /blueprints/
- /config/
- /crash-reports/
- /logs/
- /resourcepacks/
- /run/
- /saves/
- /screenshots/
- /scripts/
- /world/
- /banned-ips.json
- /banned-players.json
- /eula.txt
- /minetweaker.log
- /ops.json
- /options.txt
- /server.properties
- /servers.dat
- /usercache.json
- /usernamecache.json
- /whitelist.json
- /mods/
- /build/
- /eclipse/
- 
+.env
+.png_compress_cache
+.gradle
+/.settings
+/bin
+.classpath
+.project
+.idea/
+/run/
+/build/
+/eclipse/
